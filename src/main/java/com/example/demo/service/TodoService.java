@@ -9,7 +9,7 @@ import com.example.demo.persistence.TodoRepository;
 
 @Service
 public class TodoService {
-	
+
 	@Autowired
 	private TodoRepository repository;
 	public String testService(){
@@ -20,7 +20,7 @@ public class TodoService {
 		
 		repository.save(entity);
 		
-		TodoEntity savedEntity = repository.findByUserId(entity.getUserId()).get(0);
+		TodoEntity savedEntity = repository.searchByUserId(entity.getUserId()).get(0);
 		return savedEntity.getUserId();
 		
 		
