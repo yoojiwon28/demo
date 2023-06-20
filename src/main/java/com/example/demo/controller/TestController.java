@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class TestController {
 	@GetMapping
 	public String testController(){
-		return "Hello World!( !)"; 안녕하세요
+		return "Hello World!(안녕하세요!)";
 	}
 	@GetMapping("/{id}")
 	public String testContollerWithPathVariables(@PathVariable(required =false) int id){
